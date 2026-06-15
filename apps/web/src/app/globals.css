@@ -2990,6 +2990,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-height: 86px;
+  overflow-y: auto;
 }
 
 .lineChartLegend span {

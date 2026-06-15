@@ -588,7 +588,11 @@ function getConfigurationKey(record: BenchmarkDisplayPrediction): string {
 }
 
 function formatConfigurationLabel(record: BenchmarkDisplayPrediction): string {
-  return `${record.model} / ${formatCondition(record.accessCondition)} / ${formatCondition(record.promptStrategy)} / ${record.forecastHorizon}`;
+  // Compact label for the chart legend: drop the (filtered) horizon and abbreviate
+  // access/strategy so up to eight series stay legible without overlapping.
+  const access = record.accessCondition === "open_book" ? "open" : record.accessCondition === "closed_book" ? "closed" : "n/a";
+  const strategy = record.promptStrategy === "probabilistic_forecast" ? "prob" : record.promptStrategy === "direct_score" ? "direct" : "n/a";
+  return `${record.model} · ${access}/${strategy}`;
 }
 
 function compareMetricValues(left: number | null | undefined, right: number | null | undefined, direction: MetricDirection): number {

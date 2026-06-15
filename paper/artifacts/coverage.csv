@@ -1,0 +1,9 @@
+h,a,s,c
+STAGE_OPENING,closed_book,direct_score,576
+STAGE_OPENING,closed_book,probabilistic_forecast,576
+STAGE_OPENING,open_book,direct_score,576
+STAGE_OPENING,open_book,probabilistic_forecast,576
+T_24H,closed_book,direct_score,16
+T_24H,closed_book,probabilistic_forecast,16
+T_24H,open_book,direct_score,16
+T_24H,open_book,probabilistic_forecast,16

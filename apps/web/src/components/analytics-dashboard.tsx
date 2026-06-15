@@ -503,7 +503,8 @@ function LineChart({ locale, series, metric }: { locale: Locale; series: Analyti
               stroke={SERIES_COLORS[index % SERIES_COLORS.length]}
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="4"
+              strokeOpacity="0.85"
+              strokeWidth="2.5"
             />
           ) : null;
         })}
