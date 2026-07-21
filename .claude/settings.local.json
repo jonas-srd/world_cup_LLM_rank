@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.thesportsdb.com)",
+      "WebFetch(domain:the-odds-api.com)",
+      "WebFetch(domain:resend.com)",
+      "WebSearch"
+    ]
+  }
+}
