@@ -1,0 +1,392 @@
+
+\begin{thebibliography}{43}
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Atreja et~al\mbox{.}(2025)]%
+        {atrejaWhatsPromptLargeScale2025}
+\bibfield{author}{\bibinfo{person}{Shubham Atreja}, \bibinfo{person}{Joshua Ashkinaze}, \bibinfo{person}{Lingyao Li}, \bibinfo{person}{Julia Mendelsohn}, {and} \bibinfo{person}{Libby Hemphill}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{What's in a {{Prompt}}?: {{A Large-Scale Experiment}} to {{Assess}} the {{Impact}} of {{Prompt Design}} on the {{Compliance}} and {{Accuracy}} of {{LLM-Generated Text Annotations}}}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the International AAAI Conference on Web and Social Media}}  \bibinfo{volume}{19} (\bibinfo{date}{June} \bibinfo{year}{2025}), \bibinfo{pages}{122--145}.
+\newblock
+\showISSN{2334-0770}
+\href{https://doi.org/10.1609/icwsm.v19i1.35807}{doi:\nolinkurl{10.1609/icwsm.v19i1.35807}}
+
+\bibitem[Balunovic et~al\mbox{.}(2025)]%
+        {balunovic_etal_2025_matharena}
+\bibfield{author}{\bibinfo{person}{Mislav Balunovic}, \bibinfo{person}{Jasper Dekoninck}, \bibinfo{person}{Ivo Petrov}, \bibinfo{person}{Nikola Jovanovi{\'c}}, {and} \bibinfo{person}{Martin Vechev}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{MathArena}: Evaluating {LLM}s on Uncontaminated Math Competitions}. In \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems}}, Vol.~\bibinfo{volume}{38}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.neurips.cc/paper_files/paper/2025/hash/1d27c01ebd3e3aebe226b44fc970d803-Abstract-Datasets_and_Benchmarks_Track.html}
+\showURL{%
+\tempurl}
+
+\bibitem[Brier(1950)]%
+        {brier_1950}
+\bibfield{author}{\bibinfo{person}{Glenn~W. Brier}.} \bibinfo{year}{1950}\natexlab{}.
+\newblock \showarticletitle{Verification of Forecasts Expressed in Terms of Probability}.
+\newblock \bibinfo{journal}{\emph{Monthly Weather Review}} \bibinfo{volume}{78}, \bibinfo{number}{1} (\bibinfo{year}{1950}), \bibinfo{pages}{1--3}.
+\newblock
+
+\bibitem[Bunker et~al\mbox{.}(2024)]%
+        {bunkerMachineLearningSoccer2024}
+\bibfield{author}{\bibinfo{person}{Rory Bunker}, \bibinfo{person}{Calvin Yeung}, {and} \bibinfo{person}{Keisuke Fujii}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Machine {{Learning}} for {{Soccer Match Result Prediction}}}.
+\newblock \bibinfo{howpublished}{https://arxiv.org/abs/2403.07669v1}.
+\newblock
+
+\bibitem[Chen et~al\mbox{.}(2025)]%
+        {chen_etal_2025_contamination}
+\bibfield{author}{\bibinfo{person}{Simin Chen}, \bibinfo{person}{Yiming Chen}, \bibinfo{person}{Zexin Li}, \bibinfo{person}{Yifan Jiang}, \bibinfo{person}{Zhongwei Wan}, \bibinfo{person}{Yixin He}, \bibinfo{person}{Dezhi Ran}, \bibinfo{person}{Tianle Gu}, \bibinfo{person}{Haizhou Li}, \bibinfo{person}{Tao Xie}, {and} \bibinfo{person}{Baishakhi Ray}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Benchmarking Large Language Models Under Data Contamination: A Survey from Static to Dynamic Evaluation}. In \bibinfo{booktitle}{\emph{Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing}}. \bibinfo{publisher}{Association for Computational Linguistics}, \bibinfo{address}{Suzhou, China}, \bibinfo{pages}{10080--10098}.
+\newblock
+\href{https://doi.org/10.18653/v1/2025.emnlp-main.511}{doi:\nolinkurl{10.18653/v1/2025.emnlp-main.511}}
+
+\bibitem[Chiang et~al\mbox{.}(2024)]%
+        {chiang2024chatbotarenaopenplatform}
+\bibfield{author}{\bibinfo{person}{Wei-Lin Chiang}, \bibinfo{person}{Lianmin Zheng}, \bibinfo{person}{Ying Sheng}, \bibinfo{person}{Anastasios~Nikolas Angelopoulos}, \bibinfo{person}{Tianle Li}, \bibinfo{person}{Dacheng Li}, \bibinfo{person}{Hao Zhang}, \bibinfo{person}{Banghua Zhu}, \bibinfo{person}{Michael Jordan}, \bibinfo{person}{Joseph~E. Gonzalez}, {and} \bibinfo{person}{Ion Stoica}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference}.
+\newblock
+\showeprint[arxiv]{2403.04132}~[cs.AI]
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2403.04132}
+\showURL{%
+\tempurl}
+
+\bibitem[Day et~al\mbox{.}(2012)]%
+        {day2012}
+\bibfield{author}{\bibinfo{person}{David~V. Day}, \bibinfo{person}{Sandy Gordon}, {and} \bibinfo{person}{Corinna Fink}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{The Sporting Life: Exploring Organizations through the Lens of Sport}.
+\newblock \bibinfo{journal}{\emph{Academy of Management Annals}} \bibinfo{volume}{6}, \bibinfo{number}{1} (\bibinfo{year}{2012}), \bibinfo{pages}{397--433}.
+\newblock
+\href{https://doi.org/10.1080/19416520.2012.678697}{doi:\nolinkurl{10.1080/19416520.2012.678697}}
+
+\bibitem[Dixon and Coles(1997)]%
+        {dixon_coles_1997}
+\bibfield{author}{\bibinfo{person}{Mark~J. Dixon} {and} \bibinfo{person}{Stuart~G. Coles}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \showarticletitle{Modelling Association Football Scores and Inefficiencies in the Football Betting Market}.
+\newblock \bibinfo{journal}{\emph{Journal of the Royal Statistical Society: Series C}} \bibinfo{volume}{46}, \bibinfo{number}{2} (\bibinfo{year}{1997}), \bibinfo{pages}{265--280}.
+\newblock
+\href{https://doi.org/10.1111/1467-9876.00065}{doi:\nolinkurl{10.1111/1467-9876.00065}}
+
+\bibitem[Feuerriegel et~al\mbox{.}(2026)]%
+        {feuerriegel2026reporting}
+\bibfield{author}{\bibinfo{person}{Stefan Feuerriegel}, \bibinfo{person}{Christopher Barrie}, \bibinfo{person}{M.~J. Crockett}, \bibinfo{person}{Laura~K. Globig}, \bibinfo{person}{Killian~L. McLoughlin}, \bibinfo{person}{Dan-Mircea Mirea}, \bibinfo{person}{Arthur Spirling}, \bibinfo{person}{Diyi Yang}, \bibinfo{person}{Tim Althoff}, \bibinfo{person}{Maria Antoniak}, \bibinfo{person}{Lisa~P. Argyle}, \bibinfo{person}{Ashwini Ashokkumar}, \bibinfo{person}{Mohammad Atari}, \bibinfo{person}{Hannah Bailey}, \bibinfo{person}{Kevin Bauer}, \bibinfo{person}{Umang Bhatt}, \bibinfo{person}{Yidong Chai}, \bibinfo{person}{Tanmoy Chakraborty}, \bibinfo{person}{Yanto Chandra}, \bibinfo{person}{Huimin Chen}, \bibinfo{person}{Hal~Daumé III}, \bibinfo{person}{Gianmarco De~Francisci Morales}, \bibinfo{person}{Morteza Dehghani}, \bibinfo{person}{Danica Dillion}, \bibinfo{person}{Johannes~C. Eichstaedt}, \bibinfo{person}{Kerstin Forster}, \bibinfo{person}{Dominique Geissler}, \bibinfo{person}{Kurt Gray},
+  \bibinfo{person}{Thomas~L. Griffiths}, \bibinfo{person}{Hartmann Jochen}, \bibinfo{person}{Oliver~P. Hauser}, \bibinfo{person}{James~K. He}, \bibinfo{person}{Rahul Hemrajani}, \bibinfo{person}{Felix Holzmeister}, \bibinfo{person}{Angel Hsing-Chi Hwang}, \bibinfo{person}{Tiancheng Hu}, \bibinfo{person}{Anna~A. Ivanova}, \bibinfo{person}{Nils Köbis}, \bibinfo{person}{Yara Kyrychenko}, \bibinfo{person}{Himabindu Lakkaraju}, \bibinfo{person}{Jia Liu}, \bibinfo{person}{Abdurahman Maarouf}, \bibinfo{person}{Sebastian Maier}, \bibinfo{person}{Lennart Meincke}, \bibinfo{person}{Rada Mihalcea}, \bibinfo{person}{Brent Mittelstadt}, \bibinfo{person}{Saif~M. Mohammad}, \bibinfo{person}{Mor Naaman}, \bibinfo{person}{Oded Netzer}, \bibinfo{person}{Alice Oh}, \bibinfo{person}{Desmond~C. Ong}, \bibinfo{person}{Francesco Pierri}, \bibinfo{person}{Barbara Plank}, \bibinfo{person}{Iyad Rahwan}, \bibinfo{person}{Talal Rahwan}, \bibinfo{person}{Pooja S.~B. Rao}, \bibinfo{person}{Claire~E. Robertson}, \bibinfo{person}{David~M.
+  Rothschild}, \bibinfo{person}{Matthew~J. Salganik}, \bibinfo{person}{Eric Schulz}, \bibinfo{person}{Chirag Shah}, \bibinfo{person}{Yash~Raj Shrestha}, \bibinfo{person}{Ekaterina Shutova}, \bibinfo{person}{Alexandra~A. Siegel}, \bibinfo{person}{Almog Simchon}, \bibinfo{person}{Huan Sun}, \bibinfo{person}{Malte Toetzke}, \bibinfo{person}{Jay J.~Van Bavel}, \bibinfo{person}{Michelle Vaccaro}, \bibinfo{person}{Jennifer~Wortman Vaughan}, \bibinfo{person}{Effy Vayena}, \bibinfo{person}{Pedro O. S.~Vaz de Melo}, \bibinfo{person}{Briana Vecchione}, \bibinfo{person}{Angelina Wang}, \bibinfo{person}{Robert West}, \bibinfo{person}{Robb Willer}, \bibinfo{person}{Dirk~U. Wulff}, \bibinfo{person}{Renwen Zhang}, \bibinfo{person}{Simone Zhang}, \bibinfo{person}{Steve Rathje}, {and} \bibinfo{person}{Manoel~Horta Ribeiro}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{A Reporting Checklist for Large Language Models in Behavioural Science}.
+\newblock \bibinfo{journal}{\emph{Nature Human Behaviour}} \bibinfo{volume}{10}, \bibinfo{number}{7} (\bibinfo{date}{July} \bibinfo{year}{2026}), \bibinfo{pages}{1182--1186}.
+\newblock
+\href{https://doi.org/10.1038/s41562-026-02492-7}{doi:\nolinkurl{10.1038/s41562-026-02492-7}}
+
+\bibitem[Feuerriegel et~al\mbox{.}(2025)]%
+        {feuerriegelUsingNaturalLanguage2025}
+\bibfield{author}{\bibinfo{person}{Stefan Feuerriegel}, \bibinfo{person}{Abdurahman Maarouf}, \bibinfo{person}{Dominik B{\"a}r}, \bibinfo{person}{Dominique Geissler}, \bibinfo{person}{Jonas Schweisthal}, \bibinfo{person}{Nicolas Pr{\"o}llochs}, \bibinfo{person}{Claire~E. Robertson}, \bibinfo{person}{Steve Rathje}, \bibinfo{person}{Jochen Hartmann}, \bibinfo{person}{Saif~M. Mohammad}, \bibinfo{person}{Oded Netzer}, \bibinfo{person}{Alexandra~A. Siegel}, \bibinfo{person}{Barbara Plank}, {and} \bibinfo{person}{Jay~J. Van~Bavel}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Using Natural Language Processing to Analyse Text Data in Behavioural Science}.
+\newblock \bibinfo{journal}{\emph{Nature Reviews Psychology}} \bibinfo{volume}{4}, \bibinfo{number}{2} (\bibinfo{year}{2025}), \bibinfo{pages}{96--111}.
+\newblock
+\showISSN{2731-0574}
+\href{https://doi.org/10.1038/s44159-024-00392-z}{doi:\nolinkurl{10.1038/s44159-024-00392-z}}
+
+\bibitem[Frauen et~al\mbox{.}(2026)]%
+        {frauenNonparametricLLMEvaluation2026}
+\bibfield{author}{\bibinfo{person}{Dennis Frauen}, \bibinfo{person}{Athiya Deviyani}, \bibinfo{person}{Mihaela {van der Schaar}}, {and} \bibinfo{person}{Stefan Feuerriegel}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Nonparametric {{LLM Evaluation}} from {{Preference Data}}}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2601.21816}} (\bibinfo{year}{2026}).
+\newblock
+\showeprint[arxiv]{2601.21816}
+
+\bibitem[Gneiting and Raftery(2007)]%
+        {gneiting_raftery_2007}
+\bibfield{author}{\bibinfo{person}{Tilmann Gneiting} {and} \bibinfo{person}{Adrian~E. Raftery}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Strictly Proper Scoring Rules, Prediction, and Estimation}.
+\newblock \bibinfo{journal}{\emph{J. Amer. Statist. Assoc.}} \bibinfo{volume}{102}, \bibinfo{number}{477} (\bibinfo{year}{2007}), \bibinfo{pages}{359--378}.
+\newblock
+\href{https://doi.org/10.1198/016214506000001437}{doi:\nolinkurl{10.1198/016214506000001437}}
+
+\bibitem[Groll et~al\mbox{.}(2019)]%
+        {sportsprediction}
+\bibfield{author}{\bibinfo{person}{Andreas Groll}, \bibinfo{person}{Christophe Ley}, \bibinfo{person}{Gunther Schauberger}, {and} \bibinfo{person}{Hans Van~Eetvelde}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{A Hybrid Random Forest to Predict Soccer Matches in International Tournaments}.
+\newblock \bibinfo{journal}{\emph{Journal of Quantitative Analysis in Sports}} \bibinfo{volume}{15}, \bibinfo{number}{4} (\bibinfo{year}{2019}), \bibinfo{pages}{271--287}.
+\newblock
+\href{https://doi.org/10.1515/jqas-2018-0060}{doi:\nolinkurl{10.1515/jqas-2018-0060}}
+
+\bibitem[Groll et~al\mbox{.}(2015)]%
+        {groll_etal_2015}
+\bibfield{author}{\bibinfo{person}{Andreas Groll}, \bibinfo{person}{Gunther Schauberger}, {and} \bibinfo{person}{Gerhard Tutz}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Prediction of Major International Soccer Tournaments Based on Team-Specific Regularized Poisson Regression: An Application to the {FIFA} World Cup 2014}.
+\newblock \bibinfo{journal}{\emph{Journal of Quantitative Analysis in Sports}} \bibinfo{volume}{11}, \bibinfo{number}{2} (\bibinfo{year}{2015}), \bibinfo{pages}{97--115}.
+\newblock
+\href{https://doi.org/10.1515/jqas-2014-0051}{doi:\nolinkurl{10.1515/jqas-2014-0051}}
+
+\bibitem[Halawi et~al\mbox{.}(2024)]%
+        {halawi_etal_2024}
+\bibfield{author}{\bibinfo{person}{Danny Halawi}, \bibinfo{person}{Fred Zhang}, \bibinfo{person}{Yueh-Han Chen}, {and} \bibinfo{person}{Jacob Steinhardt}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Approaching Human-Level Forecasting with Language Models}.
+\newblock \bibinfo{howpublished}{Advances in Neural Information Processing Systems 37}.
+\newblock
+\href{https://doi.org/10.52202/079017-1598}{doi:\nolinkurl{10.52202/079017-1598}}
+
+\bibitem[Hogarth and Makridakis(1981)]%
+        {hogarthForecastingPlanningEvaluation1981}
+\bibfield{author}{\bibinfo{person}{Robin~M. Hogarth} {and} \bibinfo{person}{Spyros Makridakis}.} \bibinfo{year}{1981}\natexlab{}.
+\newblock \showarticletitle{Forecasting and {{Planning}}: {{An Evaluation}}}.
+\newblock \bibinfo{journal}{\emph{Management Science}} \bibinfo{volume}{27}, \bibinfo{number}{2} (\bibinfo{date}{Feb.} \bibinfo{year}{1981}), \bibinfo{pages}{115--138}.
+\newblock
+\showISSN{0025-1909}
+\href{https://doi.org/10.1287/mnsc.27.2.115}{doi:\nolinkurl{10.1287/mnsc.27.2.115}}
+
+\bibitem[Holm(1979)]%
+        {holm1979}
+\bibfield{author}{\bibinfo{person}{Sture Holm}.} \bibinfo{year}{1979}\natexlab{}.
+\newblock \showarticletitle{A Simple Sequentially Rejective Multiple Test Procedure}.
+\newblock \bibinfo{journal}{\emph{Scandinavian Journal of Statistics}} \bibinfo{volume}{6}, \bibinfo{number}{2} (\bibinfo{year}{1979}), \bibinfo{pages}{65--70}.
+\newblock
+
+\bibitem[Hsieh et~al\mbox{.}(2024)]%
+        {hsieh_etal_2024}
+\bibfield{author}{\bibinfo{person}{Elvis Hsieh}, \bibinfo{person}{Preston Fu}, {and} \bibinfo{person}{Jonathan Chen}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Reasoning and Tools for Human-Level Forecasting}. In \bibinfo{booktitle}{\emph{Proceedings of the Workshop on the Future of Event Detection (FuturED)}}. \bibinfo{publisher}{Association for Computational Linguistics}, \bibinfo{address}{Miami, Florida, USA}, \bibinfo{pages}{48--57}.
+\newblock
+\href{https://doi.org/10.18653/v1/2024.futured-1.5}{doi:\nolinkurl{10.18653/v1/2024.futured-1.5}}
+
+\bibitem[Hyndman and Athanasopoulos(2018)]%
+        {hyndmanForecastingPrinciplesPractice2018}
+\bibfield{author}{\bibinfo{person}{Rob~J. Hyndman} {and} \bibinfo{person}{George Athanasopoulos}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Forecasting: Principles and Practice}}.
+\newblock \bibinfo{publisher}{OTexts}.
+\newblock
+\showISBNx{978-0-9875071-1-2}
+
+\bibitem[Karger et~al\mbox{.}(2025)]%
+        {forecastbench}
+\bibfield{author}{\bibinfo{person}{Ezra Karger}, \bibinfo{person}{Houtan Bastani}, \bibinfo{person}{Yueh-Han Chen}, \bibinfo{person}{Zachary Jacobs}, \bibinfo{person}{Danny Halawi}, \bibinfo{person}{Fred Zhang}, {and} \bibinfo{person}{Philip~E. Tetlock}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{ForecastBench}: A Dynamic Benchmark of {AI} Forecasting Capabilities}.
+\newblock \bibinfo{howpublished}{International Conference on Learning Representations}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2409.19839}{doi:\nolinkurl{10.48550/arXiv.2409.19839}}
+
+\bibitem[Kiela et~al\mbox{.}(2021)]%
+        {dynabench}
+\bibfield{author}{\bibinfo{person}{Douwe Kiela}, \bibinfo{person}{Max Bartolo}, \bibinfo{person}{Yixin Nie}, \bibinfo{person}{Divyansh Kaushik}, \bibinfo{person}{Atticus Geiger}, \bibinfo{person}{Zhengxuan Wu}, \bibinfo{person}{Bertie Vidgen}, \bibinfo{person}{Grusha Prasad}, \bibinfo{person}{Amanpreet Singh}, \bibinfo{person}{Pratik Ringshia}, \bibinfo{person}{Zhiyi Ma}, \bibinfo{person}{Tristan Thrush}, \bibinfo{person}{Sebastian Riedel}, \bibinfo{person}{Zeerak Waseem}, \bibinfo{person}{Pontus Stenetorp}, \bibinfo{person}{Robin Jia}, \bibinfo{person}{Mohit Bansal}, \bibinfo{person}{Christopher Potts}, {and} \bibinfo{person}{Adina Williams}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Dynabench: Rethinking Benchmarking in {NLP}}. In \bibinfo{booktitle}{\emph{Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}}. \bibinfo{publisher}{Association for Computational Linguistics}, \bibinfo{address}{Online}, \bibinfo{pages}{4110--4124}.
+\newblock
+\href{https://doi.org/10.18653/v1/2021.naacl-main.324}{doi:\nolinkurl{10.18653/v1/2021.naacl-main.324}}
+
+\bibitem[Konietschke and Pauly(2014)]%
+        {konietschkeBootstrappingPermutingPaired2014}
+\bibfield{author}{\bibinfo{person}{Frank Konietschke} {and} \bibinfo{person}{Markus Pauly}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Bootstrapping and Permuting Paired T-Test Type Statistics}.
+\newblock \bibinfo{journal}{\emph{Statistics and Computing}} \bibinfo{volume}{24}, \bibinfo{number}{3} (\bibinfo{date}{May} \bibinfo{year}{2014}), \bibinfo{pages}{283--296}.
+\newblock
+\showISSN{1573-1375}
+\href{https://doi.org/10.1007/s11222-012-9370-4}{doi:\nolinkurl{10.1007/s11222-012-9370-4}}
+
+\bibitem[Krogh and Vedelsby(1994)]%
+        {krogh_vedelsby_1994}
+\bibfield{author}{\bibinfo{person}{Anders Krogh} {and} \bibinfo{person}{Jesper Vedelsby}.} \bibinfo{year}{1994}\natexlab{}.
+\newblock \showarticletitle{Neural Network Ensembles, Cross Validation, and Active Learning}. In \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems 7}}. \bibinfo{publisher}{MIT Press}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.neurips.cc/paper/1994/hash/b8c37e33defde51cf91e1e03e51657da-Abstract.html}
+\showURL{%
+\tempurl}
+
+\bibitem[Leitner et~al\mbox{.}(2010)]%
+        {leitner_etal_2010}
+\bibfield{author}{\bibinfo{person}{Christoph Leitner}, \bibinfo{person}{Achim Zeileis}, {and} \bibinfo{person}{Kurt Hornik}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Forecasting Sports Tournaments by Ratings of (Prob)abilities: A Comparison for the {EURO} 2008}.
+\newblock \bibinfo{journal}{\emph{International Journal of Forecasting}} \bibinfo{volume}{26}, \bibinfo{number}{3} (\bibinfo{year}{2010}), \bibinfo{pages}{471--481}.
+\newblock
+\href{https://doi.org/10.1016/j.ijforecast.2009.10.001}{doi:\nolinkurl{10.1016/j.ijforecast.2009.10.001}}
+
+\bibitem[Ley et~al\mbox{.}(2019)]%
+        {ley_etal_2019}
+\bibfield{author}{\bibinfo{person}{Christophe Ley}, \bibinfo{person}{Tom Van~de Wiele}, {and} \bibinfo{person}{Hans Van~Eetvelde}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Ranking Soccer Teams on the Basis of Their Current Strength: A Comparison of Maximum Likelihood Approaches}.
+\newblock \bibinfo{journal}{\emph{Statistical Modelling}} \bibinfo{volume}{19}, \bibinfo{number}{1} (\bibinfo{year}{2019}), \bibinfo{pages}{55--73}.
+\newblock
+\href{https://doi.org/10.1177/1471082X18817650}{doi:\nolinkurl{10.1177/1471082X18817650}}
+
+\bibitem[Liang et~al\mbox{.}(2023)]%
+        {liang2023holisticevaluationlanguagemodels}
+\bibfield{author}{\bibinfo{person}{Percy Liang}, \bibinfo{person}{Rishi Bommasani}, \bibinfo{person}{Tony Lee}, \bibinfo{person}{Dimitris Tsipras}, \bibinfo{person}{Dilara Soylu}, \bibinfo{person}{Michihiro Yasunaga}, \bibinfo{person}{Yian Zhang}, \bibinfo{person}{Deepak Narayanan}, \bibinfo{person}{Yuhuai Wu}, \bibinfo{person}{Ananya Kumar}, \bibinfo{person}{Benjamin Newman}, \bibinfo{person}{Binhang Yuan}, \bibinfo{person}{Bobby Yan}, \bibinfo{person}{Ce Zhang}, \bibinfo{person}{Christian Cosgrove}, \bibinfo{person}{Christopher~D. Manning}, \bibinfo{person}{Christopher Ré}, \bibinfo{person}{Diana Acosta-Navas}, \bibinfo{person}{Drew~A. Hudson}, \bibinfo{person}{Eric Zelikman}, \bibinfo{person}{Esin Durmus}, \bibinfo{person}{Faisal Ladhak}, \bibinfo{person}{Frieda Rong}, \bibinfo{person}{Hongyu Ren}, \bibinfo{person}{Huaxiu Yao}, \bibinfo{person}{Jue Wang}, \bibinfo{person}{Keshav Santhanam}, \bibinfo{person}{Laurel Orr}, \bibinfo{person}{Lucia Zheng}, \bibinfo{person}{Mert Yuksekgonul},
+  \bibinfo{person}{Mirac Suzgun}, \bibinfo{person}{Nathan Kim}, \bibinfo{person}{Neel Guha}, \bibinfo{person}{Niladri Chatterji}, \bibinfo{person}{Omar Khattab}, \bibinfo{person}{Peter Henderson}, \bibinfo{person}{Qian Huang}, \bibinfo{person}{Ryan Chi}, \bibinfo{person}{Sang~Michael Xie}, \bibinfo{person}{Shibani Santurkar}, \bibinfo{person}{Surya Ganguli}, \bibinfo{person}{Tatsunori Hashimoto}, \bibinfo{person}{Thomas Icard}, \bibinfo{person}{Tianyi Zhang}, \bibinfo{person}{Vishrav Chaudhary}, \bibinfo{person}{William Wang}, \bibinfo{person}{Xuechen Li}, \bibinfo{person}{Yifan Mai}, \bibinfo{person}{Yuhui Zhang}, {and} \bibinfo{person}{Yuta Koreeda}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Holistic Evaluation of Language Models}.
+\newblock
+\showeprint[arxiv]{2211.09110}~[cs.CL]
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2211.09110}
+\showURL{%
+\tempurl}
+
+\bibitem[Liu et~al\mbox{.}(2026)]%
+        {exante}
+\bibfield{author}{\bibinfo{person}{Yachuan Liu}, \bibinfo{person}{Xiaochun Wei}, \bibinfo{person}{Lin Shi}, \bibinfo{person}{Xinnuo Li}, \bibinfo{person}{Bohan Zhang}, \bibinfo{person}{Paramveer Dhillon}, {and} \bibinfo{person}{Qiaozhu Mei}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{ExAnte}: A Benchmark for Ex-Ante Inference in Large Language Models}. In \bibinfo{booktitle}{\emph{Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)}}. \bibinfo{publisher}{Association for Computational Linguistics}, \bibinfo{address}{Rabat, Morocco}, \bibinfo{pages}{1551--1571}.
+\newblock
+\href{https://doi.org/10.18653/v1/2026.eacl-long.72}{doi:\nolinkurl{10.18653/v1/2026.eacl-long.72}}
+
+\bibitem[Ma et~al\mbox{.}(2021)]%
+        {dynaboard}
+\bibfield{author}{\bibinfo{person}{Zhiyi Ma}, \bibinfo{person}{Kawin Ethayarajh}, \bibinfo{person}{Tristan Thrush}, \bibinfo{person}{Somya Jain}, \bibinfo{person}{Ledell Wu}, \bibinfo{person}{Robin Jia}, \bibinfo{person}{Christopher Potts}, \bibinfo{person}{Adina Williams}, {and} \bibinfo{person}{Douwe Kiela}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \bibinfo{title}{Dynaboard: An Evaluation-As-A-Service Platform for Holistic Next-Generation Benchmarking}.
+\newblock \bibinfo{howpublished}{Advances in Neural Information Processing Systems 34}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.neurips.cc/paper/2021/hash/55b1927fdafef39c48e5b73b5d61ea60-Abstract.html}
+\showURL{%
+\tempurl}
+
+\bibitem[Maher(1982)]%
+        {maher_1982}
+\bibfield{author}{\bibinfo{person}{M.~J. Maher}.} \bibinfo{year}{1982}\natexlab{}.
+\newblock \showarticletitle{Modelling Association Football Scores}.
+\newblock \bibinfo{journal}{\emph{Statistica Neerlandica}} \bibinfo{volume}{36}, \bibinfo{number}{3} (\bibinfo{year}{1982}), \bibinfo{pages}{109--118}.
+\newblock
+\href{https://doi.org/10.1111/j.1467-9574.1982.tb00782.x}{doi:\nolinkurl{10.1111/j.1467-9574.1982.tb00782.x}}
+
+\bibitem[Meyer et~al\mbox{.}(2025)]%
+        {tsarena}
+\bibfield{author}{\bibinfo{person}{Marcel Meyer}, \bibinfo{person}{Sascha Kaltenpoth}, \bibinfo{person}{Henrik Albers}, \bibinfo{person}{Kevin Zalipski}, {and} \bibinfo{person}{Oliver M{\"u}ller}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{TS-Arena} -- A Live Forecast Pre-Registration Platform}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2512.20761}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2512.20761}{doi:\nolinkurl{10.48550/arXiv.2512.20761}}
+
+\bibitem[Montgomery({[n.\,d.]})]%
+        {DesignAnalysisExperiments}
+\bibfield{author}{\bibinfo{person}{Douglas~C. Montgomery}.} \bibinfo{year}{[n.\,d.]}\natexlab{}.
+\newblock \bibinfo{title}{Design and {{Analysis}} of {{Experiments}}, 10th {{Edition}} \textbar{} {{Wiley}}}.
+\newblock \bibinfo{howpublished}{https://www.wiley.com/en-us/design-and-analysis-of-experiments-10th-edition-p-9781119492443}.
+\newblock
+
+\bibitem[Petropoulos et~al\mbox{.}(2022)]%
+        {PETROPOULOS2022705}
+\bibfield{author}{\bibinfo{person}{Fotios Petropoulos}, \bibinfo{person}{Daniele Apiletti}, \bibinfo{person}{Vassilios Assimakopoulos}, \bibinfo{person}{Mohamed~Zied Babai}, \bibinfo{person}{Devon~K. Barrow}, \bibinfo{person}{Souhaib Ben~Taieb}, \bibinfo{person}{Christoph Bergmeir}, \bibinfo{person}{Ricardo~J. Bessa}, \bibinfo{person}{Jakub Bijak}, \bibinfo{person}{John~E. Boylan}, \bibinfo{person}{Jethro Browell}, \bibinfo{person}{Claudio Carnevale}, \bibinfo{person}{Jennifer~L. Castle}, \bibinfo{person}{Pasquale Cirillo}, \bibinfo{person}{Michael~P. Clements}, \bibinfo{person}{Clara Cordeiro}, \bibinfo{person}{Fernando~Luiz Cyrino~Oliveira}, \bibinfo{person}{Shari De~Baets}, \bibinfo{person}{Alexander Dokumentov}, \bibinfo{person}{Joanne Ellison}, \bibinfo{person}{Piotr Fiszeder}, \bibinfo{person}{Philip~Hans Franses}, \bibinfo{person}{David~T. Frazier}, \bibinfo{person}{Michael Gilliland}, \bibinfo{person}{M.~Sinan G{\"o}n{\"u}l}, \bibinfo{person}{Paul Goodwin}, \bibinfo{person}{Luigi Grossi},
+  \bibinfo{person}{Yael {Grushka-Cockayne}}, \bibinfo{person}{Mariangela Guidolin}, \bibinfo{person}{Massimo Guidolin}, \bibinfo{person}{Ulrich Gunter}, \bibinfo{person}{Xiaojia Guo}, \bibinfo{person}{Renato Guseo}, \bibinfo{person}{Nigel Harvey}, \bibinfo{person}{David~F. Hendry}, \bibinfo{person}{Ross Hollyman}, \bibinfo{person}{Tim Januschowski}, \bibinfo{person}{Jooyoung Jeon}, \bibinfo{person}{Victor Richmond~R. Jose}, \bibinfo{person}{Yanfei Kang}, \bibinfo{person}{Anne~B. Koehler}, \bibinfo{person}{Stephan Kolassa}, \bibinfo{person}{Nikolaos Kourentzes}, \bibinfo{person}{Sonia Leva}, \bibinfo{person}{Feng Li}, \bibinfo{person}{Konstantia Litsiou}, \bibinfo{person}{Spyros Makridakis}, \bibinfo{person}{Gael~M. Martin}, \bibinfo{person}{Andrew~B. Martinez}, \bibinfo{person}{Sheik Meeran}, \bibinfo{person}{Theodore Modis}, \bibinfo{person}{Konstantinos Nikolopoulos}, \bibinfo{person}{Dilek {\"O}nkal}, \bibinfo{person}{Alessia Paccagnini}, \bibinfo{person}{Anastasios Panagiotelis}, \bibinfo{person}{Ioannis
+  Panapakidis}, \bibinfo{person}{Jose~M. Pav{\'i}a}, \bibinfo{person}{Manuela Pedio}, \bibinfo{person}{Diego~J. Pedregal}, \bibinfo{person}{Pierre Pinson}, \bibinfo{person}{Patr{\'i}cia Ramos}, \bibinfo{person}{David~E. Rapach}, \bibinfo{person}{J.~James Reade}, \bibinfo{person}{Bahman {Rostami-Tabar}}, \bibinfo{person}{Micha{\l} Rubaszek}, \bibinfo{person}{Georgios Sermpinis}, \bibinfo{person}{Han~Lin Shang}, \bibinfo{person}{Evangelos Spiliotis}, \bibinfo{person}{Aris~A. Syntetos}, \bibinfo{person}{Priyanga~Dilini Talagala}, \bibinfo{person}{Thiyanga~S. Talagala}, \bibinfo{person}{Len Tashman}, \bibinfo{person}{Dimitrios Thomakos}, \bibinfo{person}{Thordis Thorarinsdottir}, \bibinfo{person}{Ezio Todini}, \bibinfo{person}{Juan~Ram{\'o}n Trapero~Arenas}, \bibinfo{person}{Xiaoqian Wang}, \bibinfo{person}{Robert~L. Winkler}, \bibinfo{person}{Alisa Yusupova}, {and} \bibinfo{person}{Florian Ziel}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Forecasting: Theory and Practice}.
+\newblock \bibinfo{journal}{\emph{International Journal of Forecasting}} \bibinfo{volume}{38}, \bibinfo{number}{3} (\bibinfo{year}{2022}), \bibinfo{pages}{705--871}.
+\newblock
+\showISSN{0169-2070}
+\href{https://doi.org/10.1016/j.ijforecast.2021.11.001}{doi:\nolinkurl{10.1016/j.ijforecast.2021.11.001}}
+
+\bibitem[Pineau et~al\mbox{.}(2020)]%
+        {pineauImprovingReproducibilityMachine2020}
+\bibfield{author}{\bibinfo{person}{Joelle Pineau}, \bibinfo{person}{Philippe {Vincent-Lamarre}}, \bibinfo{person}{Koustuv Sinha}, \bibinfo{person}{Vincent Larivi{\`e}re}, \bibinfo{person}{Alina Beygelzimer}, \bibinfo{person}{Florence {d'Alch{\'e}-Buc}}, \bibinfo{person}{Emily Fox}, {and} \bibinfo{person}{Hugo Larochelle}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{Improving {{Reproducibility}} in {{Machine Learning Research}} ({{A Report}} from the {{NeurIPS}} 2019 {{Reproducibility Program}})}.
+\newblock
+\showeprint[arxiv]{2003.12206}~[cs.LG]
+\href{https://doi.org/10.48550/arXiv.2003.12206}{doi:\nolinkurl{10.48550/arXiv.2003.12206}}
+
+\bibitem[Power(2002)]%
+        {powerDecisionSupportSystems2002}
+\bibfield{author}{\bibinfo{person}{Daniel~J. Power}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Decision Support Systems: Concepts and Resources for Managers} (\bibinfo{edition}{1. publ} ed.)}.
+\newblock \bibinfo{publisher}{Quorum Books}, \bibinfo{address}{Westport, Conn.}
+\newblock
+\showISBNx{978-1-56720-497-1 978-0-387-23174-7}
+
+\bibitem[Pratt et~al\mbox{.}(2024)]%
+        {pratt_etal_2024}
+\bibfield{author}{\bibinfo{person}{Sarah Pratt}, \bibinfo{person}{Seth Blumberg}, \bibinfo{person}{Pietro~Kreitlon Carolino}, {and} \bibinfo{person}{Meredith~Ringel Morris}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Can Language Models Use Forecasting Strategies?}
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2406.04446}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2406.04446}{doi:\nolinkurl{10.48550/arXiv.2406.04446}}
+
+\bibitem[{Rico-Gonz{\'a}lez} et~al\mbox{.}(2022)]%
+        {rico-gonzalezMachineLearningApplication2022}
+\bibfield{author}{\bibinfo{person}{Markel {Rico-Gonz{\'a}lez}}, \bibinfo{person}{Jos{\'e} {Pino-Ortega}}, \bibinfo{person}{Amaia M{\'e}ndez}, \bibinfo{person}{Filipe Clemente}, {and} \bibinfo{person}{Arnold Baca}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Machine Learning Application in Soccer: A Systematic Review}.
+\newblock \bibinfo{journal}{\emph{Biology of Sport}} \bibinfo{volume}{40}, \bibinfo{number}{1} (\bibinfo{year}{2022}), \bibinfo{pages}{249--263}.
+\newblock
+\showISSN{0860-021X, 2083-1862}
+\href{https://doi.org/10.5114/biolsport.2023.112970}{doi:\nolinkurl{10.5114/biolsport.2023.112970}}
+
+\bibitem[Shim et~al\mbox{.}(2002)]%
+        {shimPresentFutureDecision2002}
+\bibfield{author}{\bibinfo{person}{J. Shim}, \bibinfo{person}{Merrill Warkentin}, \bibinfo{person}{James Courtney}, \bibinfo{person}{Daniel Power}, \bibinfo{person}{Ramesh Sharda}, {and} \bibinfo{person}{Christer Carlsson}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Past, {{Present}}, {{And Future Of Decision Support Technology}}}.
+\newblock \bibinfo{journal}{\emph{Decision Support Systems}} \bibinfo{volume}{33}, \bibinfo{number}{2} (\bibinfo{date}{Jan.} \bibinfo{year}{2002}), \bibinfo{pages}{111--126}.
+\newblock
+\href{https://doi.org/10.1016/S0167-9236(01)00139-7}{doi:\nolinkurl{10.1016/S0167-9236(01)00139-7}}
+
+\bibitem[White et~al\mbox{.}(2025)]%
+        {livebench}
+\bibfield{author}{\bibinfo{person}{Colin White}, \bibinfo{person}{Samuel Dooley}, \bibinfo{person}{Manley Roberts}, \bibinfo{person}{Arka Pal}, \bibinfo{person}{Benjamin Feuer}, \bibinfo{person}{Siddhartha Jain}, \bibinfo{person}{Ravid Shwartz-Ziv}, \bibinfo{person}{Neel Jain}, \bibinfo{person}{Khalid Saifullah}, \bibinfo{person}{Sreemanti Dey}, \bibinfo{person}{Shubh Agrawal}, \bibinfo{person}{Sandeep Sandha}, \bibinfo{person}{Siddartha Naidu}, \bibinfo{person}{Chinmay Hegde}, \bibinfo{person}{Yann LeCun}, \bibinfo{person}{Tom Goldstein}, \bibinfo{person}{Willie Neiswanger}, {and} \bibinfo{person}{Micah Goldblum}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{LiveBench}: A Challenging, Contamination-Limited {LLM} Benchmark}.
+\newblock \bibinfo{howpublished}{International Conference on Learning Representations}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.iclr.cc/paper_files/paper/2025/hash/e4a46394ba5378b3f9a186a5b4c650d1-Abstract-Conference.html}
+\showURL{%
+\tempurl}
+
+\bibitem[Wolfe et~al\mbox{.}(2005)]%
+        {wolfe2005}
+\bibfield{author}{\bibinfo{person}{Richard~A. Wolfe}, \bibinfo{person}{Karl~E. Weick}, \bibinfo{person}{John~M. Usher}, \bibinfo{person}{James~R. Terborg}, \bibinfo{person}{Laura Poppo}, \bibinfo{person}{A.~J. Murrell}, \bibinfo{person}{John~M. Dukerich}, \bibinfo{person}{Deborah~C. Core}, \bibinfo{person}{Kevin~E. Dickson}, {and} \bibinfo{person}{James~S. Jourdan}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Sport and Organizational Studies: Exploring Synergy}.
+\newblock \bibinfo{journal}{\emph{Journal of Management Inquiry}} \bibinfo{volume}{14}, \bibinfo{number}{2} (\bibinfo{year}{2005}), \bibinfo{pages}{182--210}.
+\newblock
+\href{https://doi.org/10.1177/1056492605275245}{doi:\nolinkurl{10.1177/1056492605275245}}
+
+\bibitem[Yan et~al\mbox{.}(2024)]%
+        {autocastpp}
+\bibfield{author}{\bibinfo{person}{Qi Yan}, \bibinfo{person}{Raihan Seraj}, \bibinfo{person}{Jiawei He}, \bibinfo{person}{Lili Meng}, {and} \bibinfo{person}{Tristan Sylvain}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{AutoCast++}: Enhancing World Event Prediction with Zero-Shot Ranking-Based Context Retrieval}.
+\newblock \bibinfo{howpublished}{International Conference on Learning Representations}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/93f01c8d9b355d7bbe3f353b44ccde66-Abstract-Conference.html}
+\showURL{%
+\tempurl}
+
+\bibitem[Yang et~al\mbox{.}(2026)]%
+        {prophetarena}
+\bibfield{author}{\bibinfo{person}{Qingchuan Yang}, \bibinfo{person}{Simon Mahns}, \bibinfo{person}{Sida Li}, \bibinfo{person}{Anri Gu}, \bibinfo{person}{Jibang Wu}, {and} \bibinfo{person}{Haifeng Xu}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{LLM-as-a-Prophet}: Understanding Predictive Intelligence with {Prophet Arena}}.
+\newblock \bibinfo{howpublished}{International Conference on Learning Representations}.
+\newblock
+\urldef\tempurl%
+\url{https://openreview.net/forum?id=VpiHkMSPqI}
+\showURL{%
+\tempurl}
+
+\bibitem[Zeileis et~al\mbox{.}(2018)]%
+        {zeileis_etal_2018}
+\bibfield{author}{\bibinfo{person}{Achim Zeileis}, \bibinfo{person}{Christoph Leitner}, {and} \bibinfo{person}{Kurt Hornik}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Probabilistic Forecasts for the 2018 {FIFA} World Cup Based on the Bookmaker Consensus Model}}.
+\newblock \bibinfo{type}{Working Papers in Economics and Statistics} 2018-09. \bibinfo{institution}{University of Innsbruck}, \bibinfo{address}{Innsbruck, Austria}.
+\newblock
+\urldef\tempurl%
+\url{https://EconPapers.repec.org/RePEc:inn:wpaper:2018-09}
+\showURL{%
+\tempurl}
+
+\bibitem[Zou et~al\mbox{.}(2022)]%
+        {autocast}
+\bibfield{author}{\bibinfo{person}{Andy Zou}, \bibinfo{person}{Tristan Xiao}, \bibinfo{person}{Ryan Jia}, \bibinfo{person}{Joe Kwon}, \bibinfo{person}{Mantas Mazeika}, \bibinfo{person}{Richard Li}, \bibinfo{person}{Dawn Song}, \bibinfo{person}{Jacob Steinhardt}, \bibinfo{person}{Owain Evans}, {and} \bibinfo{person}{Dan Hendrycks}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \bibinfo{title}{Forecasting Future World Events with Neural Networks}.
+\newblock \bibinfo{howpublished}{Advances in Neural Information Processing Systems 35}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.neurips.cc/paper/2022/hash/aec870a6772336c15dac992c16f2e7c9-Abstract-Datasets_and_Benchmarks.html}
+\showURL{%
+\tempurl}
+
+\end{thebibliography}
