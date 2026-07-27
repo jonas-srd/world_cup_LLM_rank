@@ -1,16 +1,44 @@
-node_modules
-.next
-dist
-.env
-.env.local
-.venv/
-__pycache__
-*.pyc
-*.log
-*.tsbuildinfo
+# Local cleanup safety copy (not part of the repository)
+.cleanup-backup-*/
+
+# Editors and operating-system metadata
+.idea/
+.vscode/
 .DS_Store
-data/*.db
-data/*.db-*
-data/*.sqlite
-data/backups/
-exports/
+Thumbs.db
+
+# Secrets and local environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Node.js / Next.js
+**/node_modules/
+**/.next/
+**/dist/
+**/.pnpm-store/
+**/*.tsbuildinfo
+
+# Python
+**/.venv/
+**/.runtime/
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+**/.pytest_cache/
+**/.pytest_tmp/
+**/pytest-cache-files-*/
+**/.ruff_cache/
+
+# Runtime data and generated analysis artifacts
+website/data/*.db
+website/data/*.db-*
+website/data/*.sqlite
+website/data/backups/
+website/exports/
+analysis/artifacts/
+analysis/inputs/*
+!analysis/inputs/README.md
+
+# Logs
+**/*.log

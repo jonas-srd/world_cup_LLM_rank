@@ -1,0 +1,11 @@
+.venv/
+.runtime/
+.pytest_tmp/
+pytest-cache-files-*/
+artifacts/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+inputs/*
+!inputs/README.md

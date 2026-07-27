@@ -1,283 +1,135 @@
-# World Cup LLM Rank
+# LLM SoccerArena
 
-Local-first 48h MVP for a Kicktipp-style website that compares football score predictions from eight LLMs.
+This repository contains the World Cup 2026 LLM forecasting service and its
+reproducible scientific analysis. The two concerns are deliberately separated:
+the production system lives in `website/`, while the Python analysis package
+lives in `analysis/`.
 
-The project uses a local SQLite database by default to avoid cloud database overhead.
-
-## Architecture
+## Repository layout
 
 ```text
 .
-+-- apps/
-|   +-- web/              # Next.js dashboard for localhost and Railway hosting
-|   +-- cron/             # Local scripts for fetching, predicting, and scoring
-+-- packages/
-|   +-- db/               # SQLite schema and repository helpers
-|   +-- llm/              # OpenRouter client, prompt builder, model config
-|   +-- scorer/           # Kicktipp-style points logic
-+-- data/                 # Local SQLite DB and sample fixtures
-+-- package.json          # npm workspaces root
-+-- tsconfig.base.json    # shared TypeScript config
+├── website/                 # Next.js site, cron jobs, SQLite layer, LLM client
+│   ├── apps/web/            # Public dashboard
+│   ├── apps/cron/           # Data sync, prediction, evaluation, and backups
+│   ├── packages/            # Shared database, LLM, and scoring packages
+│   ├── data/                # Local runtime data (databases are ignored)
+│   ├── deploy/seed/         # Compressed database seed for deployment
+│   └── docs/                # Website and Railway operations
+├── analysis/                # Installable Python analysis project
+│   ├── src/                 # `soccerarena_analysis` package
+│   ├── tests/               # Statistical and data-contract tests
+│   ├── inputs/              # Local/private inputs (ignored)
+│   ├── assets/              # Versioned plotting assets
+│   └── docs/                # Analysis protocol and audit checklists
+├── .python-version          # Recommended local Python version
+├── LICENSE
+└── README.md
 ```
 
-## Local Data Flow
+The website was imported from `origin/internal-cron-staging` at
+`b0e097ab360ae93a0873a96714b127d1e00ba5e4`. The Python package was imported
+from `upstream/kdd_submission` at
+`6547ea70bae02cd1734842cb03a5a049b7788e16`.
 
-```text
-football-data.org -> data/world-cup.db -> LLM predictions -> scores -> website
-```
+Paper drafts, IDE settings, local database backups, virtual environments, and
+generated analysis snapshots are not part of the cleaned source tree.
 
-1. Fetch World Cup matches from football-data.org into SQLite.
-2. Run the prediction script once per match day.
-3. Store all LLM predictions in SQLite.
-4. Sync results again after matches finish.
-5. Run scoring.
-6. The local website reads from SQLite and shows the ranking.
+## Website quick start
 
-## Setup
+Requirements: Node.js 20 or newer and npm.
 
 ```bash
-npm install
-copy .env.example .env
-```
-
-Fill in `.env`:
-
-```text
-FOOTBALL_DATA_API_KEY=your_football_data_key
-FOOTBALL_DATA_COMPETITION=WC
-FOOTBALL_DATA_SEASON=2026
-OPENROUTER_API_KEY=your_openrouter_key
-OPENROUTER_TEST_MODEL=openai/gpt-5.5
-OPENROUTER_MODEL_IDS=
-SQLITE_DB_PATH=
-```
-
-Leave `SQLITE_DB_PATH` empty to use:
-
-```text
-data/world-cup.db
-```
-
-Never commit `.env`. It is ignored by git and must stay local/private.
-
-## Local Commands
-
-Initialize the local SQLite DB:
-
-```bash
+cd website
+npm ci
+cp .env.example .env
 npm run db:init
-```
-
-Fetch all World Cup fixtures/results from football-data.org:
-
-```bash
-npm run sync:football-data
-```
-
-Optional API-Football fallback for historical smoke tests:
-
-```bash
-npm run sync:api-football -- --season=2022
-```
-
-Check that OpenRouter works:
-
-```bash
-npm run openrouter:smoke
-```
-
-List currently free OpenRouter models:
-
-```bash
-npm run openrouter:list-free
-```
-
-Run daily predictions for today's matches:
-
-```bash
-npm run predict
-```
-
-Run predictions for the next scheduled match if there are no matches today:
-
-```bash
-npm run predict:next
-```
-
-Limit the number of upcoming matches:
-
-```bash
-npm run predict:next -- --limit=3
-```
-
-Score finished matches:
-
-```bash
-npm run score
-```
-
-Recalculate all existing finished-match scores after changing the scoring system:
-
-```bash
-npm run score -- --all
-```
-
-Run benchmark predictions for all known group-stage matches with resumable skipping:
-
-```bash
-npm run benchmark:predict -- --group-stage --skip-existing --concurrency=3
-```
-
-Useful benchmark prediction filters:
-
-```bash
-npm run benchmark:predict -- --group-stage --access=closed_book --skip-existing --concurrency=5
-npm run benchmark:predict -- --group-stage --access=open_book --skip-existing --concurrency=2
-npm run benchmark:predict -- --group-stage --prompt-strategy=direct_score --skip-existing --concurrency=3
-```
-
-`--skip-existing` skips already valid predictions and retries invalid/API-error rows. Use `--skip-any-existing` only when you want to preserve every existing row regardless of validity.
-
-Run the one-time pre-tournament Kicktipp special-question predictions:
-
-```bash
-npm run special:predict -- --concurrency=2
-```
-
-This generates the 15 tournament-level questions once for the same active model roster and the same 2x2 `closed_book`/`open_book` x `direct_score`/`probabilistic_forecast` strategy design. The special predictions use the existing initial horizon name `STAGE_OPENING`; no `T_24H` or `T_1H` special predictions are generated.
-
-Special prediction rerun behavior:
-
-```bash
-npm run special:predict -- --access=closed_book --concurrency=3
-npm run special:predict -- --question=world_champion,semifinalists --model=openai/gpt-5.5
-npm run special:predict -- --force
-```
-
-By default, valid existing special predictions are skipped and failed/invalid rows are retried. Use `--force` to overwrite valid rows, or `--skip-any-existing` to preserve every existing row. The special-question prompt context is built only from fixture and group data; it must not read match predictions, prior special predictions, evaluations, analytics, scores, or tournament-tree outputs.
-
-Validate special-question definitions, JSON validation, and storage:
-
-```bash
-npm run test:special
-```
-
-Export paper-analysis datasets for the World Cup 2026 benchmark:
-
-```bash
-npm run benchmark:export
-```
-
-This writes:
-
-```text
-exports/worldcup2026_matches.csv
-exports/worldcup2026_predictions_raw.csv
-exports/worldcup2026_predictions_validated.csv
-exports/worldcup2026_evaluations.csv
-exports/worldcup2026_tool_logs.jsonl
-```
-
-The exports include invalid benchmark predictions and unevaluated rows. See `docs/worldcup2026_paper_exports.md`.
-
-Start the local website:
-
-```bash
 npm run dev
 ```
 
-Open:
+On Windows Command Prompt, use `copy .env.example .env` instead of `cp`.
+The dashboard is available at `http://localhost:3000`.
 
-```text
-http://localhost:3000
+Common checks:
+
+```bash
+npm run typecheck
+npm run test:analytics
+npm run test:special
+npm run test:benchmark-scheduling
+npm run build
 ```
 
-## Scoring
+See [website/README.md](website/README.md) for environment variables, prediction
+jobs, data exports, database backups, and Railway deployment.
 
-```text
-5 points: exact result
-2 points: correct goal difference
-1 point: correct tendency
-0 points: miss
+## Analysis quick start
+
+Requirements: Python 3.11–3.13 and `uv`.
+
+```bash
+cd analysis
+uv sync --extra dev
+uv run ruff check src tests scripts
+uv run pytest \
+  --ignore=tests/test_data_and_external_contracts.py \
+  -k "not normalized_tournament_tables_match_registered_design"
 ```
 
-## football-data.org
+The complete pipeline needs the following local inputs:
 
-The primary World Cup sync uses football-data.org:
+1. `website/data/world-cup.db` — the primary SQLite source of truth.
+2. `analysis/inputs/worldcup2026-full-prediction-dataset.csv` — the consolidated
+   website CSV used only for reconciliation.
+3. `analysis/inputs/llmsoccerarena-analysis-main.zip` — the registered external
+   baseline archive used by the audit.
 
-```text
-GET https://api.football-data.org/v4/competitions/WC/matches
-Query: season=2026
-Header: X-Auth-Token: FOOTBALL_DATA_API_KEY
+Run the pipeline from `analysis/`:
+
+```bash
+uv run soccerarena-analysis run --config analysis.yaml
 ```
 
-The API key is only used in local server-side scripts under `apps/cron`. Do not expose it through frontend code or a `NEXT_PUBLIC_` variable.
+With all inputs prepared and `prepare` artifacts available, run the complete
+test suite with `uv run pytest`.
 
-## OpenRouter
+Results, figures, tables, verification reports, and the manifest are written to
+`analysis/artifacts/`, which is intentionally ignored by Git.
 
-OpenRouter is used as the single LLM gateway:
+See [analysis/README.md](analysis/README.md) for the pipeline stages, annotation
+checkpoint, configuration, and individual analysis commands.
 
-```text
-POST https://openrouter.ai/api/v1/chat/completions
-Header: Authorization: Bearer OPENROUTER_API_KEY
-```
-
-The MVP default uses the minimal flagship benchmark models from `packages/llm/src/models.ts`.
-
-To override the active subset without editing code, set comma-separated OpenRouter model IDs from `FULL_BENCHMARK_MODELS`:
+## End-to-end data flow
 
 ```text
-OPENROUTER_MODEL_IDS=openai/gpt-5.5,anthropic/claude-opus-4.8
+football-data.org + OpenRouter
+              │
+              ▼
+website/data/world-cup.db
+       │              │
+       ▼              ▼
+public dashboard   website exports
+       │              │
+       └──────┬───────┘
+              ▼
+      analysis/analysis.yaml
+              │
+              ▼
+     analysis/artifacts/
 ```
 
-For a single-model smoke test, set only one model:
+SQLite remains the analytical source of truth. Public CSV data is reconciled
+against the frozen database but never supplies analytical values.
 
-```text
-OPENROUTER_MODEL_IDS=mistralai/mistral-large-2512
-```
+## Secrets and generated data
 
-Benchmark prediction calls default to the same completion ceiling for first attempts, validation retries, and JSON repair calls:
+Never commit `.env`, API keys, local databases, downloaded backups, website
+exports, or `analysis/artifacts/`. The root and project-specific ignore files
+cover these paths.
 
-```text
-OPENROUTER_BENCHMARK_MAX_COMPLETION_TOKENS=5000
-OPENROUTER_BENCHMARK_RETRY_MAX_COMPLETION_TOKENS=5000
-OPENROUTER_BENCHMARK_REPAIR_MAX_COMPLETION_TOKENS=5000
-```
+The compressed seed at `website/deploy/seed/world-cup.db.gz` is intentionally
+versioned because it is part of the website deployment process.
 
-Leave these unset to use the same 5000-token defaults. Increase them only if a model still returns truncated JSON.
+## License
 
-The minimal flagship MVP setup uses paid OpenRouter models and requires credits:
-
-```text
-OPENROUTER_MODEL_IDS=openai/gpt-5.5,anthropic/claude-opus-4.8,google/gemini-3.1-pro-preview,x-ai/grok-4.3,deepseek/deepseek-v4-pro,qwen/qwen3.7-max,mistralai/mistral-large-2512
-```
-
-## Public Deployment
-
-SQLite is good for the local MVP. For a public Railway deployment, keep this limitation in mind:
-
-```text
-Railway can run the app, but the local SQLite file should not be treated as durable production storage unless it is backed by a persistent volume.
-```
-
-Pragmatic public options later:
-
-1. Keep using SQLite locally, export static JSON, and deploy the read-only website.
-2. Move the same DB repository layer to a hosted SQL database when automatic public updates matter.
-3. Use a small VPS if you want SQLite plus a public writable server.
-
-## Apps And Packages
-
-- `apps/web`: Next.js dashboard. Reads `data/world-cup.db` locally when available, otherwise shows sample data.
-- `apps/cron/src/jobs/init-db.ts`: creates the local SQLite database and tables.
-- `apps/cron/src/jobs/sync-football-data.ts`: fetches World Cup fixtures/results from football-data.org into SQLite.
-- `apps/cron/src/jobs/sync-api-football.ts`: optional API-Football fallback for historical smoke tests.
-- `apps/cron/src/jobs/openrouter-smoke-test.ts`: checks the OpenRouter API key with one model.
-- `apps/cron/src/jobs/openrouter-list-free-models.ts`: lists currently free OpenRouter text models.
-- `apps/cron/src/jobs/predict-today.ts`: loads today's matches, calls OpenRouter, stores predictions.
-- `apps/cron/src/jobs/predict-next.ts`: predicts the next scheduled matches for local testing.
-- `apps/cron/src/jobs/score-results.ts`: scores finished matches using Kicktipp rules.
-- `apps/cron/src/jobs/export-worldcup2026-paper-data.ts`: exports paper-analysis CSV/JSONL datasets.
-- `packages/db`: SQLite connection, schema, and repository helpers.
-- `packages/llm`: model IDs, prompt construction, and OpenRouter calls.
-- `packages/scorer`: shared points logic.
+See [LICENSE](LICENSE).
