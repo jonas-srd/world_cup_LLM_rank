@@ -1,0 +1,2 @@
+# Standalone Table 2 runner only; the full analysis package uses uv.lock.
+numpy==2.5.1

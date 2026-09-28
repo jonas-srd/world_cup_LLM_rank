@@ -1,10 +1,17 @@
 # LLM SoccerArena analysis
 
 This directory is an isolated, installable Python project for the reproducible
-World Cup 2026 analysis. SQLite is the sole source of truth. Each analysis reads
-only manifest-verified Parquet tables derived from a consistent frozen database;
+World Cup 2026 analysis. For the full pipeline, SQLite is the sole source of truth.
+Each analysis reads only manifest-verified Parquet tables derived from a consistent frozen database;
 the public website CSV is read once for reconciliation and never supplies
 analytical values.
+
+For a standalone verification of the published Table 2, use
+[`scripts/reproduce-paper-table2.py`](scripts/reproduce-paper-table2.py). This
+separate runner reads the frozen, hash-verified release CSV directly and
+reproduces all 105 displayed estimates and confidence limits. It does not need
+the pipeline's private/local inputs. Follow the
+[Table 2 reproduction instructions](docs/paper-table2-reproduction.md).
 
 The code was imported from `upstream/kdd_submission` at commit
 `6547ea70bae02cd1734842cb03a5a049b7788e16`. Planning drafts and generated
@@ -20,7 +27,7 @@ analysis/
 │   ├── stages/             # Freeze, validate, derive, reconcile, audit
 │   └── statistics/         # Bootstrap, metrics, and multiplicity control
 ├── tests/                  # Unit, statistical, and data-contract tests
-├── scripts/                # Maintenance helpers
+├── scripts/                # Table 2 reproduction and maintenance helpers
 ├── assets/                 # Provider icons and country flags
 ├── external/               # Versioned external-baseline runtime metadata
 ├── inputs/                 # Local/private inputs; ignored by Git

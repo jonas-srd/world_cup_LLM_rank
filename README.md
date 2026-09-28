@@ -35,6 +35,18 @@ from `upstream/kdd_submission` at
 Paper drafts, IDE settings, local database backups, virtual environments, and
 generated analysis snapshots are not part of the cleaned source tree.
 
+## Reproduce paper Table 2
+
+The [standalone Table 2 script](analysis/scripts/reproduce-paper-table2.py) checks
+the frozen CSV and reproduces all **105 displayed estimates and confidence
+limits**. It needs only Python 3.12 and NumPy 2.5.1, with no database, API key, or
+new model calls.
+
+See the [download and run instructions](analysis/docs/paper-table2-reproduction.md).
+The [versioned research release](https://www.llm-soccerarena.com/data/worldcup2026-2026-07-21-v1)
+provides the original CSV, provenance records, inference/search settings, and
+integrity manifest. The partial deployment seed is not the paper snapshot.
+
 ## Website quick start
 
 Requirements: Node.js 20 or newer and npm.
